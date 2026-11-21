@@ -1,6 +1,6 @@
 {
   "name": "@micropasts/provenance-analytics",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Zero-dependency chronological swimlane, actor handoff Sankey, and role/activity analytics for Linked Art provenance and spatial trails.",
   "type": "module",
   "browser": "./dist/index.js",
