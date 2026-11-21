@@ -1,0 +1,49 @@
+{
+  "name": "@micropasts/provenance-analytics",
+  "version": "0.1.0",
+  "description": "Zero-dependency chronological swimlane, actor handoff Sankey, and role/activity analytics for Linked Art provenance and spatial trails.",
+  "type": "module",
+  "browser": "./dist/index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    },
+    "./style.css": "./dist/index.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "build:docs": "npm run build && vite build --config vite.demo.config.js",
+    "dev": "vite --port 5174",
+    "lint": "node --check src/*.js demo/*.js vite.config.js vite.demo.config.js",
+    "prepack": "npm run build",
+    "publish:public": "npm publish --access public"
+  },
+  "keywords": [
+    "linked-art",
+    "provenance",
+    "cultural-heritage",
+    "swimlane",
+    "sankey",
+    "svg",
+    "tailwindcss",
+    "vite",
+    "zero-dependency"
+  ],
+  "author": "Daniel Pett",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0",
+    "vite": "^6.0.0"
+  }
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Provenance Analytics Demo — @micropasts/provenance-analytics</title>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen p-6 antialiased">
+  <div class="max-w-5xl mx-auto">
+    <header class="mb-5">
+      <h1 class="text-xl font-semibold tracking-tight text-slate-100">@micropasts/provenance-analytics</h1>
+      <p class="text-sm text-slate-400 mt-1">
+        Load a Linked Art JSON file, fetch an endpoint URL, or test sample provenance trails.
+      </p>
+    </header>
+
+    <div id="demo-load-controls" class="flex flex-wrap items-center gap-2 mb-4">
+      <input
+        id="url-input"
+        type="url"
+        placeholder="Enter Linked Art JSON-LD URL (e.g. Getty object JSON)..."
+        class="flex-1 min-w-[260px] bg-slate-900 text-slate-100 border border-slate-700 rounded-md px-3 py-1.5 text-xs focus:outline-none focus:border-indigo-500"
+      />
+      <button id="load-url-btn" type="button" class="px-3 py-1.5 text-xs font-medium rounded-md bg-slate-800 hover:bg-slate-700 border border-slate-700 cursor-pointer">
+        Load URL
+      </button>
+      <label class="px-3 py-1.5 text-xs font-medium rounded-md bg-indigo-600 hover:bg-indigo-500 text-white cursor-pointer">
+        Upload JSON File
+        <input id="json-file-input" type="file" accept=".json,application/json" class="hidden" />
+      </label>
+      <button id="sample-antinous-btn" type="button" class="px-3 py-1.5 text-xs font-medium rounded-md bg-slate-800 hover:bg-slate-700 border border-slate-700 cursor-pointer">
+        Belvedere Antinous
+      </button>
+      <button id="sample-piebald-btn" type="button" class="px-3 py-1.5 text-xs font-medium rounded-md bg-slate-800 hover:bg-slate-700 border border-slate-700 cursor-pointer">
+        Piebald Horse
+      </button>
+      <button id="sample-linked-art-btn" type="button" class="px-3 py-1.5 text-xs font-medium rounded-md bg-slate-800 hover:bg-slate-700 border border-slate-700 cursor-pointer">
+        Sample Linked Art
+      </button>
+      <button id="sample-trail-btn" type="button" class="px-3 py-1.5 text-xs font-medium rounded-md bg-slate-800 hover:bg-slate-700 border border-slate-700 cursor-pointer">
+        Sample Trail
+      </button>
+    </div>
+
+    <div id="analytics"></div>
+    <p id="status" class="mt-2.5 text-xs text-slate-400">
+      Ready. Select a JSON file, load a URL, or click any chart node/ribbon to inspect activeLegIndex.
+    </p>
+  </div>
+
+  <script type="module" src="./demo.js"></script>
+</body>
+</html>

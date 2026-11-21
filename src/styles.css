@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@source "../src";
+@source "../demo";
+
+@custom-variant dark (&:where(.dark, .dark *, [data-theme="dark"], [data-theme="dark"] *));
+
+.pa-grid-line {
+  @apply stroke-slate-300 dark:stroke-slate-700/70;
+  stroke-width: 1;
+}
+
+.pa-gap-band {
+  @apply fill-rose-500/15;
+}
+
+.pa-axis-label {
+  @apply fill-slate-900 dark:fill-slate-100 text-[11px] font-semibold;
+}
+
+.pa-sub-label {
+  @apply fill-slate-500 dark:fill-slate-400 text-[10px];
+}
+
+.pa-row-label {
+  @apply fill-slate-800 dark:fill-slate-200 text-[11px];
+}
+
+.pa-anon-text {
+  @apply fill-amber-600 dark:fill-amber-400 font-semibold;
+}
+
+.pa-active-text {
+  @apply fill-indigo-600 dark:fill-indigo-400;
+}
+
+.pa-handoff-line {
+  @apply stroke-indigo-500/80;
+  stroke-width: 1.75;
+}
+
+.pa-handoff-anon {
+  @apply stroke-amber-500;
+  stroke-width: 1.75;
+  stroke-dasharray: 4 3;
+}
+
+.pa-node-solid {
+  @apply fill-indigo-500;
+}
+
+.pa-node-hollow {
+  @apply fill-slate-50 dark:fill-slate-900 stroke-indigo-500;
+  stroke-width: 2;
+}
+
+.pa-node-exhibition {
+  @apply fill-sky-500;
+}
+
+.pa-node-anon {
+  @apply fill-amber-500;
+}
+
+.pa-node-selected circle,
+.pa-node-selected polygon {
+  @apply stroke-emerald-400;
+  stroke-width: 2.5;
+}
+
+.pa-sankey-ribbon {
+  @apply stroke-indigo-500/35 hover:stroke-indigo-500/75 transition-opacity;
+}
+
+.pa-sankey-active {
+  @apply stroke-indigo-500/80;
+}
+
+.pa-sankey-node {
+  @apply fill-indigo-500;
+}
